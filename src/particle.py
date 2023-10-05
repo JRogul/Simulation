@@ -6,10 +6,10 @@ class Particle:
         self.position = position
 
 
-    def update_position(self, time_step, size):
-        step = np.random.uniform(-1, 1, 2)* self.mass * time_step
-        if max(self.position + step * time_step) > size[1] or \
-            min(self.position + step * time_step) < size[0]:
+    def update_position(self, size):
+        step = np.random.uniform(-1, 1, 2)* self.mass 
+        if max(self.position + step) > size[1] or \
+            min(self.position + step) < size[0]:
             pass
         else:
             self.position += step

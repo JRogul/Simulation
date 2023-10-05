@@ -16,6 +16,6 @@ class Simulation:
                      position=np.random.uniform(-20, 20, 2))
             self.add_particle(part)
 
-    def simulate(self, time_step):
+    def simulate(self):
         for particle in self.particles:
-            particle.update_position(time_step, self.size)
+            particle.update_position(self.size)
